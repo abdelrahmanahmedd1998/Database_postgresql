@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS users CASCADE;
+
+CREATE TABLE users (
+    id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    username    TEXT       NOT NULL,
+    email       TEXT,
+    is_active   BOOLEAN    NOT NULL DEFAULT TRUE,
+    created_at  TIMESTAMPTZ NOT NULL DEFAULT  NOW()
+);
