@@ -1,7 +1,7 @@
 TRUNCATE users RESTART IDENTITY;
 INSERT INTO users(username,email,is_active,created_at) VALUES
    ('alice',    'alice@example.com',TRUE, NOW() -INTERVAL '60 days'),
-   ('bob',          'bob@example.com',    TRUE,  NOW() - INTERVAL '45 days'),
+   ('bob',          'alice@example.com',    TRUE,  NOW() - INTERVAL '45 days'),
    ('carol',        'carol@example.com',  TRUE,  NOW() - INTERVAL '30 days'),
    ('dave',         'dave@example.com',   FALSE, NOW() - INTERVAL '28 days'),
    ('eve',          'eve@example.com',    TRUE,  NOW() - INTERVAL '21 days'),
